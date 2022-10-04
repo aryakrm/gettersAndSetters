@@ -1,8 +1,31 @@
 class Person {
   constructor(firstName, lastName, age) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age;
+    this._firstName = firstName;
+    this._lastName = lastName;
+    this._age = age;
+  }
+  set firstName(firstName) {
+    this._firstName = firstName;
+  }
+
+  get firstName() {
+    return this._firstName;
+  }
+
+  set lastName(lastName) {
+    this._lastName = lastName;
+  }
+
+  get lastName() {
+    return this._lastName;
+  }
+
+  set age(age) {
+    this._age = age;
+  }
+
+  get age() {
+    return this._age;
   }
   set fullName(fullName) {
     this._fullName = fullName;
